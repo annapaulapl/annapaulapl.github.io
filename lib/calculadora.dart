@@ -12,6 +12,8 @@ class _CalculadoraState extends State<Calculadora> {
   
   String _expressao = '';
   String _resultado = '';
+  
+  get evaluator => null;
 
   void _pressionarBotao(String valor) {
     setState(() {
@@ -39,12 +41,13 @@ class _CalculadoraState extends State<Calculadora> {
 
         
         final expression = Expression.parse(expressaoModificada);
-        final evaluator = ExpressionEvaluator();
+        const ExpressionEvaluator();
         final result = evaluator.eval(expression, {});
         
-        
-        if (result is double || result is int) {
+                if (result is double || result is int) {
           _resultado = result.toString(); 
+
+                _resultado = result.toString(); 
         } else {
           _resultado = 'Erro'; 
         }

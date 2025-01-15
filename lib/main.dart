@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'calculadora.dart'; // Certifique-se de que o arquivo 'calculadora.dart' existe e está no mesmo diretório ou importa corretamente.
+import 'package:myapp/calculadora.dart';
+
 
 void main() {
   runApp(const App());
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      child: const Calculadora(), // Removido o estilo extra aqui
+                      child: const Calculadora(), 
                     ),
                   ),
                 ],
